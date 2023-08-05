@@ -5,7 +5,12 @@ const app = Vue.createApp({
             showBooks: true,
             title: "12 rules of Power",
             author: "Jordan Peterson",
-            age: 55
+            age: 55,
+            books:[
+                {author:"Neil Degrasse Tyson",title:"Cosmic Queries"},
+                {author:"Barrack Obama",title:"Coming to America"},
+                {author:"Elon Musk",title:"Delivering the Falcon Heavy"},
+            ]
         }
     },
 

@@ -14,7 +14,10 @@
         <h2>the template is now here</h2>
 
         <div v-if="showBooks">
-             <p>{{title}}-{{author}},{{age}}</p>
+            <ul>
+                <li v-for="book in books"> <p>{{book.title}}-{{book.author}}</p></li>
+            </ul>
+            
         </div>
 
         <button @click="hideBooks()" @mouseover="handleEvents($event,5)">
