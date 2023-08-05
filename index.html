@@ -17,13 +17,13 @@
              <p>{{title}}-{{author}},{{age}}</p>
         </div>
 
-        <button @click="hideBooks()">
+        <button @click="hideBooks()" @mouseover="handleEvents($event,5)">
             <span v-if="!showBooks">Show Boooks</span>
             <span  v-else>Hide Boooks</span>
             
         </button>
 
-        <p v-show="showBooks">Currently showing books</p>
+        <p v-show="showBooks" >Currently showing books</p>
       
         <!-- <button v-on:click="age++" type="button">Increase age</button>
         <button v-on:click="age--" type="button">Decrese age</button>
