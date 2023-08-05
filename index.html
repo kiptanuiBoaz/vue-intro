@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- cdn -->
+    <script src="https://unpkg.com/vue@3.0.2/dist/vue.global.js"></script>
+    <title>Reading page</title>
+</head>
+<body>
+
+    <h1>VueJs:0</h1>
+
+    <div id="app">
+        <h2>the template is now here</h2>
+
+        <div v-if="showBooks">
+             <p>{{title}}-{{author}},{{age}}</p>
+        </div>
+
+        <button @click="hideBooks()">
+            <span v-if="!showBooks">Show Boooks</span>
+            <span  v-else>Hide Boooks</span>
+            
+        </button>
+
+        <p v-show="showBooks">Currently showing books</p>
+      
+        <!-- <button v-on:click="age++" type="button">Increase age</button>
+        <button v-on:click="age--" type="button">Decrese age</button>
+        <button @click="changeTitle('Becoming Potus')" type="button">Change</button> -->
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
