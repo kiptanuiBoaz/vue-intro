@@ -6,6 +6,7 @@ const app = Vue.createApp({
             title: "12 rules of Power",
             author: "Jordan Peterson",
             age: 55,
+            url:"http://www.boazkiptanui.vercel.app",
             books:[
                 {author:"Neil Degrasse Tyson",title:"Cosmic Queries"},
                 {author:"Barrack Obama",title:"Coming to America"},

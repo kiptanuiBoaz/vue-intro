@@ -17,7 +17,8 @@
             <ul>
                 <li v-for="book in books"> <p>{{book.title}}-{{book.author}}</p></li>
             </ul>
-            
+            <a v-bind:href="url">Portfolio site</a>
+            <a :href="url">GitHub</a>
         </div>
 
         <button @click="hideBooks()" @mouseover="handleEvents($event,5)">
