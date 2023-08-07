@@ -5,6 +5,14 @@
     <!-- cdn -->
     <script src="https://unpkg.com/vue@3.0.2/dist/vue.global.js"></script>
     <title>Reading page</title>
+    <style>
+        li{
+            background-color: green;
+        }
+        li.fav{
+            background-color: orangered;
+        }
+    </style>
 </head>
 <body>
 
@@ -15,7 +23,9 @@
 
         <div v-if="showBooks">
             <ul>
-                <li v-for="book in books"> <p>{{book.title}}-{{book.author}}</p></li>
+                <li @click="toggleClass(book)" :class="{fav:book.isFav}" v-for="book in filteredBooks"> 
+                    <p>{{book.title}}-{{book.author}}</p>
+                </li>
             </ul>
             <a v-bind:href="url">Portfolio site</a>
             <a :href="url">GitHub</a>
